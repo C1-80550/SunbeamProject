@@ -10,8 +10,8 @@ resource "aws_s3_bucket_ownership_controls" "example" {
   }
 }
 
-resource "aws_dynamodb_table" "statelock" {
-	name = "state-lock"
+resource "aws_dynamodb_table" "state-lock-new" {
+	name = "state-lock-new"
 	billing_mode = "PAY_PER_REQUEST"
 	hash_key = "LockID"
 
