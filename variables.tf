@@ -1,4 +1,4 @@
 variable "bucketname" {
-	default = "mysunbeamterraformproject"
+	default = "mysunbeamterraformproject2"
 }
 
