@@ -1,10 +1,3 @@
-resource "aws_s3_bucket_ownership_controls" "example" {
-  bucket =mysunbeamterraformproject3
-
-  rule {
-    object_ownership = "BucketOwnerPreferred"
-  }
-}
 
 resource "aws_s3_object" "index"{
 	bucket = mysunbeamterraformproject3
@@ -52,6 +45,5 @@ resource "aws_s3_bucket_website_configuration" "website" {
 		key = "error.html"
 		}
 
-	depends_on = [ mysunbeamterraformproject3.example ]
 
 }
