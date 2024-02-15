@@ -1,6 +1,6 @@
 
 resource "aws_s3_object" "index"{
-	bucket = mysunbeamterraformproject3
+	bucket = "mysunbeamterraformproject3"
 	key = "index.html"
 	source = "index.html"
 	acl = "private"
@@ -9,7 +9,7 @@ resource "aws_s3_object" "index"{
 }
 
 resource "aws_s3_object" "error" {
-	bucket = mysunbeamterraformproject3
+	bucket = "mysunbeamterraformproject3"
 	key = "error.html"
 	source = "error.html"
 	acl = "private"
@@ -18,7 +18,7 @@ resource "aws_s3_object" "error" {
 
 
 resource "aws_s3_object" "style" {
-	bucket =mysunbeamterraformproject3
+	bucket = "mysunbeamterraformproject3"
 	key = "style.css"
 	source = "style.css"
 	acl = "private"
@@ -27,7 +27,7 @@ resource "aws_s3_object" "style" {
 
 
 resource "aws_s3_object" "script" {
-	bucket =mysunbeamterraformproject3
+	bucket = "mysunbeamterraformproject3"
 	key = "script.js"
 	source = "script.js"
 	acl = "private"
@@ -36,7 +36,7 @@ resource "aws_s3_object" "script" {
 
 
 resource "aws_s3_bucket_website_configuration" "website" {
-	bucket = mysunbeamterraformproject3
+	bucket = "mysunbeamterraformproject3"
 	index_document {
 		suffix = "index.html"
 		}
@@ -44,6 +44,4 @@ resource "aws_s3_bucket_website_configuration" "website" {
 	error_document {
 		key = "error.html"
 		}
-
-
 }
